@@ -1,22 +1,32 @@
-import { Box, Button, useColorMode } from "@chakra-ui/react";
+import { Box, Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 export function CheckTheme() {
-  const [ check, setCheck ] = useState(false);
+  const [ checkDarkMode, setCheckDarkMode ] = useState(false);
   const { toggleColorMode, colorMode } = useColorMode()
 
 
+  // useEffect(() => {
+  //   if(checkDarkMode && colorMode === 'light'){
+
+  //   } else {
+  //     toggleColorMode();
+
+  //   }
+
+  // }, [checkDarkMode])
+  
+
   useEffect(() => {
-    if(check && colorMode === 'light'){
-
+    if(colorMode === 'light'){
+      setCheckDarkMode(false)
     } else {
-      toggleColorMode();
-
+      setCheckDarkMode(true)
     }
 
-  }, [check])
+  }, [colorMode])
   
-  // const shapeBGColor = useColorModeValue('gray.100', 'gray.800')
+  const shapeBGColor = useColorModeValue('gray.100', 'gray.800')
   
   return(
     <Button
@@ -25,13 +35,13 @@ export function CheckTheme() {
       h='50px'
       borderRadius='360px'
       position='relative'
-      onClick={() => setCheck(!check)}
+      onClick={() => toggleColorMode()}
     >
       <Box 
-        // onChange={() => setCheck(true)}
+        // onChange={() => setCheckDarkMode(true)}
         transitionTimingFunction='ease-out'
         transition='0.5s'
-        bg={check ? 'yellow.400': 'gray.400'}
+        bg={checkDarkMode ? 'gray.400' : 'yellow.400'}
         h='50px'
         w='50px'
         left='0px'
@@ -39,12 +49,12 @@ export function CheckTheme() {
         position='absolute'
       />
       <Box 
-        bg="gray.800"
+        bg={shapeBGColor}
         h='50px'
         w='50px'
         borderRadius='50px'
         position='absolute'
-        left={check ? '50px' : '15px'}
+        left={checkDarkMode ?  '15px' : '50px' }
         transition='0.5s'
         transitionTimingFunction='ease-out'
       />
