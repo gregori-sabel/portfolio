@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app'
 import { ChakraProvider, useColorMode } from '@chakra-ui/react'
-import { theme } from '../styles/theme'
-import { lightTheme } from '../styles/lightTheme'
-import { darkTheme } from '../styles/darkTheme'
+import { theme } from '../../styles/theme'
+import { lightTheme } from '../../styles/lightTheme'
+import { darkTheme } from '../../styles/darkTheme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   // const { colorMode } = useColorMode()

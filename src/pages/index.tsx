@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, Flex, Box, useColorModeValue} from '@chakra-ui/react'
 import { LoremIpsum } from "lorem-ipsum";
-import { Block } from './components/Block';
-import { CheckTheme } from './components/CheckTheme';
-import content from '../content.json'
+import { Block } from '../components/Block';
+import { CheckTheme } from '../components/CheckTheme';
+import content from '../../content.json'
 
 export function Home () {
 

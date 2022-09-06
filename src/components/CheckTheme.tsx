@@ -1,4 +1,4 @@
-import { Box, Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, useColorMode } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 export function CheckTheme() {
@@ -16,7 +16,7 @@ export function CheckTheme() {
 
   }, [check])
   
-  const shapeBGColor = useColorModeValue('gray.100', 'gray.800')
+  // const shapeBGColor = useColorModeValue('gray.100', 'gray.800')
   
   return(
     <Button
