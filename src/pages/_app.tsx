@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <ChakraProvider >
+      <title>Grégori Sabel</title>
       <Component {...pageProps} />
     </ChakraProvider>
   )
