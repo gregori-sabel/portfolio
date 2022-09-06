@@ -26,9 +26,14 @@ export function Home () {
 
 
       <Flex w='100%' align='center' flexDir='column'>
-        <Flex w='800px' flexDir='column'>
+        <Flex 
+          maxW='800px' 
+          flexDir='column' 
+          mb='80px' 
+          marginX={['10px', '20px', '40px']} 
+          align='center'
+        >
 
-          <Flex flexDir='column' align='center'>
             <Text fontSize='2xl' fontWeight='bold' mt='80px'>
               Projects
             </Text>
@@ -39,18 +44,14 @@ export function Home () {
                 </a>
               </Box>
             ))}
-          </Flex>
 
-          <Flex flexDir='column' align='center'>
             <Text fontSize='2xl' fontWeight='bold' mt='80px'>
               Experience
             </Text>
             { content.experience.map( experience => (
               <Block key={experience.title} title={experience.title} text={experience.text}/>
             ))}
-          </Flex>
 
-          <Flex flexDir='column' align='center' mb='80px'>
             <Text fontSize='2xl' fontWeight='bold' mt='80px'>
               Other habilities
             </Text>
@@ -59,7 +60,6 @@ export function Home () {
                 <Block key={habilities.title} title={habilities.title} text={habilities.text}/>
               ))}
             </Flex>
-          </Flex>
 
         </Flex>
       </Flex>      

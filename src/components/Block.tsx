@@ -26,7 +26,7 @@ export function Block({ text, title, hasGithub = false }: Props) {
       transition='0.2s'
       _hover={{
         boxShadow:'2xl',
-        cursor:'pointer',
+        cursor: hasGithub ? 'pointer' : 'default',
         backgroundColor:shapeHoverBGColor,
         color:shapeHoverColor
       }}>
