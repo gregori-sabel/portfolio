@@ -35,7 +35,7 @@ export function Home () {
             { content.projects.map( project => (
               <Box key={project.title}>
                 <a href={project.github} target="_blank" rel="noreferrer">
-                    <Block  title={project.title} text={project.text} />
+                    <Block  title={project.title} text={project.text} hasGithub/>
                 </a>
               </Box>
             ))}

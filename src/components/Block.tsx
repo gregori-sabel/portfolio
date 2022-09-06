@@ -3,10 +3,11 @@ import React from "react";
 
 interface Props {
   title: string;
-  text: string
+  text: string;
+  hasGithub?: boolean;
 }
 
-export function Block({ text, title }: Props) {
+export function Block({ text, title, hasGithub = false }: Props) {
 
   const shapeBGColor = useColorModeValue('white', 'gray.700')
   const shapeHoverBGColor = useColorModeValue('gray.700', 'gray.400')
@@ -29,13 +30,18 @@ export function Block({ text, title }: Props) {
         backgroundColor:shapeHoverBGColor,
         color:shapeHoverColor
       }}>
-      <Text
-        position='absolute'
-        top='10px'
-        right='20px'
-        color={shapeBGColor}
-        fontWeight='bold'>Github</Text>
-        
+      
+      { hasGithub && 
+        <Text
+          position='absolute'
+          top='10px'
+          right='20px'
+          color={shapeBGColor}
+          fontWeight='bold'
+        >
+            Github
+        </Text>
+      }
       <Text fontWeight='bold' fontSize='xl' pb='20px'>
         {title}
       </Text>
