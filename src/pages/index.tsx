@@ -1,6 +1,5 @@
 import React from 'react'
-import { Text, Flex, Box, useColorModeValue, Link} from '@chakra-ui/react'
-import { LoremIpsum } from "lorem-ipsum";
+import { Text, Flex, Box, useColorModeValue} from '@chakra-ui/react'
 import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
 import content from '../../content.json'
