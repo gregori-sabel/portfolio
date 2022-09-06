@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, Box, useColorModeValue} from '@chakra-ui/react'
+import { Text, Flex, Box, useColorModeValue, Link} from '@chakra-ui/react'
 import { LoremIpsum } from "lorem-ipsum";
 import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
@@ -33,7 +33,11 @@ export function Home () {
               Projects
             </Text>
             { content.projects.map( project => (
-              <Block key={project.title} title={project.title} text={project.text}/>
+              <Box key={project.title}>
+                <a href={project.github} target="_blank" rel="noreferrer">
+                    <Block  title={project.title} text={project.text} />
+                </a>
+              </Box>
             ))}
           </Flex>
 
@@ -46,13 +50,15 @@ export function Home () {
             ))}
           </Flex>
 
-          <Flex flexDir='column' align='center' >
+          <Flex flexDir='column' align='center' mb='80px'>
             <Text fontSize='2xl' fontWeight='bold' mt='80px'>
               Other habilities
             </Text>
-            { content.habilities.map( habilities => (
-              <Block key={habilities.title} title={habilities.title} text={habilities.text}/>
-            ))}
+            <Flex gap='40px'>
+              { content.habilities.map( habilities => (
+                <Block key={habilities.title} title={habilities.title} text={habilities.text}/>
+              ))}
+            </Flex>
           </Flex>
 
         </Flex>
