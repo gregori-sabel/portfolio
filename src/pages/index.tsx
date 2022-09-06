@@ -9,7 +9,7 @@ export function Home () {
 
   const shapeBGColor = useColorModeValue('gray.100', 'gray.80')
   return (
-    <Flex w='100%' justify='center'>
+    <Flex w='100%' justify='center' bg={shapeBGColor}>
       <Flex 
         maxW='800px' 
         flexDir='column' 
