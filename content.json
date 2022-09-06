@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "title": "Basketball, The Natural Prediction",
+      "text": "For this project, me and my team thought ”if nature choose the natual selection to evolve things, why shouldn't we?” So we built a natural selection in python from scratch, without any librarys of IA, to help us predict the result of games using data from past games.",
+      "github": "https://github.com/Pibaska/NBA-Basketball-Prediction"
+    },
+    {
+      "title": "WikiSpeed, The daily game of links",
+      "text": "In this game you start in a wikipedia page and you have to get in another specified page just through the links. You can play this game in this link  ---> wikispeed.vercel.app <---",
+      "github": "https://github.com/gregori-sabel/wikispeed"
+    },
+    {
+      "title": "Netflix, the return of the clone",
+      "text": "For this project, i wanted to pratice my CSS, so i choose a site that most of people know the style and tried to copy it design.",
+      "github": "https://github.com/Greg-art/Netflix-Clone"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Lince, The growing local company",
+      "text": "Lince was responsible for make the tecnology for the two biggest factories of my city, and i used a mix of Java, Javascript, and CSS inside another language called xseed that was an is a cobol to java migration language. I stayed 6 months there, and left to pursue something more new."
+    },
+    {
+      "title": "SCI - Sistemas contábeis",
+      "text": "SCI is a company that makes accounting systems for people and for others companies, i worked making maintence with them for 1 year, worked with Delphi, but was not my favorite stack. But was a great first experience."
+    }
+  ],
+  "habilities": [
+    {
+      "title": "Edition",
+      "text": "Editing, both video and images, is one of my hobbies for the last 8 years, and i learned a lot in this time. in the matter of technology, i have experience with Sony Vegas and Davince Resolve for videos, and Photoshop and Illustrator for images."
+    },
+    {
+      "title": "Maybe its just that",
+      "text": "I thought that i would have more to say. Sorry for creating a new session just for that."
+    }
+  ]
+}

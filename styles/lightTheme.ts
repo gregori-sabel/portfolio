@@ -1,12 +1,8 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, ThemeConfig } from '@chakra-ui/react'
 
-export const theme = extendTheme({ 
+export const lightTheme: ThemeConfig = extendTheme({ 
   colors: {
-    brand: {
-      900: '#1a365d',
-      800: '#153e75',
-      700: '#2a69ac',
-    },
+    shape: '#fff',
   },
   styles: {
     global:{

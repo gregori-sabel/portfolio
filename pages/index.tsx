@@ -1,7 +1,9 @@
 import React from 'react'
-import { Text, Flex, Box } from '@chakra-ui/react'
+import { Text, Flex, Box, useColorModeValue} from '@chakra-ui/react'
 import { LoremIpsum } from "lorem-ipsum";
 import { Block } from './components/Block';
+import { CheckTheme } from './components/CheckTheme';
+import content from '../content.json'
 
 export function Home () {
 
@@ -15,55 +17,47 @@ export function Home () {
   const loremTitle = lorem.generateWords(3)
   const loremText = lorem.generateParagraphs(1)
 
+  const shapeBGColor = useColorModeValue('gray.100', 'gray.80')
   return (
-    <>
-      <Box position='relative'>
-        <Box 
-          bg='yellow.400'
-          h='50px'
-          w='50px'
-          m='10px'
-          borderRadius='50px'
-          position='absolute'
-          />
-        <Box 
-          bg='gray.100'
-          h='50px'
-          w='50px'
-          m='10px'
-          borderRadius='50px'
-          position='absolute'
-          left='20px'
-          transition='0.2s'
-          _checked={{
-            left: '30px'
-          }}
-        />
-        
-      </Box>
+    <Box bg={shapeBGColor}>
+    <Box position='absolute' right='40px' top='20px' overflow='hidden'>
+      <CheckTheme />
+    </Box>
 
 
       <Flex w='100%' align='center' flexDir='column'>
         <Flex w='800px' flexDir='column'>
+
           <Flex flexDir='column' align='center'>
             <Text fontSize='2xl' fontWeight='bold' mt='80px'>
-              Projetos
+              Projects
             </Text>
-            <Block title={lorem.generateWords(3)} text={lorem.generateParagraphs(1)}/>
-            <Block title={lorem.generateWords(3)} text={lorem.generateParagraphs(1)}/>
-            <Block title={lorem.generateWords(3)} text={lorem.generateParagraphs(1)}/>
+            { content.projects.map( project => (
+              <Block key={project.title} title={project.title} text={project.text}/>
+            ))}
           </Flex>
+
           <Flex flexDir='column' align='center'>
             <Text fontSize='2xl' fontWeight='bold' mt='80px'>
-              {lorem.generateWords(1)}
+              Experience
             </Text>
-            <Block title={lorem.generateWords(3)} text={lorem.generateParagraphs(1)}/>
-            <Block title={lorem.generateWords(3)} text={lorem.generateParagraphs(1)}/>
-            <Block title={lorem.generateWords(3)} text={lorem.generateParagraphs(1)}/>
+            { content.experience.map( experience => (
+              <Block key={experience.title} title={experience.title} text={experience.text}/>
+            ))}
           </Flex>
+
+          <Flex flexDir='column' align='center' >
+            <Text fontSize='2xl' fontWeight='bold' mt='80px'>
+              Other habilities
+            </Text>
+            { content.habilities.map( habilities => (
+              <Block key={habilities.title} title={habilities.title} text={habilities.text}/>
+            ))}
+          </Flex>
+
         </Flex>
-      </Flex>
-    </>
+      </Flex>      
+    </Box>
   )
 }
 
