@@ -1,4 +1,4 @@
-import { Box, Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Fade, SlideFade, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 export function CheckTheme() {
@@ -6,18 +6,8 @@ export function CheckTheme() {
   const { toggleColorMode, colorMode } = useColorMode()
 
 
-  // useEffect(() => {
-  //   if(checkDarkMode && colorMode === 'light'){
-
-  //   } else {
-  //     toggleColorMode();
-
-  //   }
-
-  // }, [checkDarkMode])
-  
-
   useEffect(() => {
+    console.log('colorMode', colorMode)
     if(colorMode === 'light'){
       setCheckDarkMode(false)
     } else {
@@ -37,27 +27,51 @@ export function CheckTheme() {
       position='relative'
       onClick={() => toggleColorMode()}
     >
-      <Box 
-        // onChange={() => setCheckDarkMode(true)}
-        transitionTimingFunction='ease-out'
-        transition='0.5s'
-        bg={checkDarkMode ? 'gray.400' : 'yellow.400'}
-        h='50px'
-        w='50px'
+      <Box
         left='0px'
-        borderRadius='50px'
+        top="0px"
         position='absolute'
-      />
-      <Box 
-        bg={shapeBGColor}
-        h='50px'
-        w='50px'
-        borderRadius='50px'
+      >
+        <Box 
+          // transition='background-color 500ms ease-out'
+          bg='gray.400'
+          h='50px'
+          w='50px'
+          borderRadius='50px'
+          position='absolute'
+          left='0px'
+        />
+        <Fade in={!checkDarkMode} >
+          <Box 
+            // transition='background-color 500ms ease-out'
+            bg='yellow.400'
+            h='50px'
+            w='50px'
+            borderRadius='50px'
+            position='absolute'
+            left='0px'
+            top='0px'
+          />
+        </Fade>
+      </Box>
+      <Box      
         position='absolute'
-        left={checkDarkMode ?  '15px' : '50px' }
-        transition='0.5s'
-        transitionTimingFunction='ease-out'
-      />
+        left='20px'
+      >
+        <SlideFade 
+          in={checkDarkMode} 
+          offsetX='50px' 
+          transition={{enter:{duration: 0.5,ease: "easeOut"}, exit:{duration: 0.5, ease: "easeInOut" }}}
+        >
+          <Box 
+            bg={shapeBGColor}
+            h='50px'
+            w='50px'
+            borderRadius='50px'
+            // transition='0.5s ease-out'
+          />
+        </SlideFade>
+      </Box>
       
     </Button>
 
