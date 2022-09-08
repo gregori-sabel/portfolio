@@ -1,14 +1,17 @@
 import React from 'react'
-import { Text, Flex, Box, useColorModeValue} from '@chakra-ui/react'
+import { Text, Flex, Box, useColorModeValue, Link} from '@chakra-ui/react'
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
 import content from '../../content.json'
+import GregLogo from '../images/gregLogo.svg'
+import Image from 'next/image';
 
 export function Home () {
 
   const shapeBGColor = useColorModeValue('gray.100', 'gray.80')
   return (
-    <Flex w='100%' justify='center' bg={shapeBGColor}>
+    <Flex w='100%' flexDir='column' align='center' bg={shapeBGColor}>
       <Flex 
         maxW='800px' 
         flexDir='column' 
@@ -49,6 +52,37 @@ export function Home () {
         </Flex>
 
       </Flex>
+
+
+      <Flex 
+        bg='gray.700' 
+        w='100%' 
+        h='150px' 
+        justify='space-between'
+        align='center'
+        paddingX='80px'
+        color='white'
+      >
+        <Flex w='30%' justify='flex-start'></Flex>
+        <Flex w='30%' align='center' flexDir='column' gap='10px'>
+          <Text fontWeight='light'>Redes</Text>
+          <Flex gap='10px'>
+            <Link href='https://www.linkedin.com/in/gregori-sabel/' target="_blank">
+              <FaLinkedin size='30px'/>
+            </Link>
+            <Link href='https://github.com/gregori-sabel' target="_blank">
+              <FaGithubSquare size='30px'/>
+            </Link>
+          </Flex>
+        </Flex>
+        {/* <Image src={GregLogo} alt="Arte vetorial Grégori Sabel"/> */}
+        <Flex w='30%' justify='flex-end'>
+          <Box w='100px'>
+            <GregLogo />
+          </Box>
+        </Flex>
+      </Flex>
+
     </Flex>   
       
   )
