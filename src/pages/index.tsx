@@ -3,15 +3,34 @@ import { Text, Flex, Box, useColorModeValue, Link} from '@chakra-ui/react'
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
-import content from '../../content.json'
+import contents from '../../contents.json'
 import GregLogo from '../images/gregLogo.svg'
-import Image from 'next/image';
+import background from '../images/background.png'
 
-export function Home () {
+export default function Home () {
 
   const shapeBGColor = useColorModeValue('gray.100', 'gray.80')
   return (
-    <Flex w='100%' flexDir='column' align='center' bg={shapeBGColor}>
+
+    <Flex 
+      w='100%' 
+      flexDir='column' 
+      align='center' 
+      bg={shapeBGColor} 
+      // bgImage="url('/background.png')"        
+      // bgPosition="center"
+      // bgRepeat="repeat-y"        
+    >
+      <Box 
+        position='absolute' 
+        right={['20px','40px']} 
+        top='20px' 
+        overflow='hidden' 
+        zIndex='10'
+      >
+        <CheckTheme />
+      </Box>
+
       <Flex 
         maxW='800px' 
         flexDir='column' 
@@ -19,37 +38,28 @@ export function Home () {
         mb='80px' 
         marginX={['15px', '20px', '40px']} 
         bg={shapeBGColor}
-      >
-        <Box position='absolute' right={['20px','40px']} top='20px' overflow='hidden'>
-          <CheckTheme />
-        </Box>
-
-        <Text fontSize='2xl' fontWeight='bold' mt={['40px', '60px','80px']}>
-          Projects
-        </Text>
-        { content.projects.map( project => (
-          <Box key={project.title}>
-            <a href={project.github} target="_blank" rel="noreferrer">
-                <Block  title={project.title} text={project.text} hasGithub/>
-            </a>
-          </Box>
+      >        
+       
+        { contents.map(content => (
+          <>
+            <Text fontSize='2xl' fontWeight='bold' mt={['40px', '60px','80px']}>
+              {content.title}
+            </Text>          
+            { content.items.map( item => (
+              <Box key={item.title} w='100%'>
+                { item.link &&
+                  <a href={item.link} target="_blank" rel="noreferrer">
+                    <Block  title={item.title} text={item.text} isGithub={item.isGithub}/>
+                  </a>
+                }
+                { !item.link &&
+                  <Block  title={item.title} text={item.text} />
+                }
+              </Box>
+            ))}
+          </>
         ))}
 
-        <Text fontSize='2xl' fontWeight='bold' mt='80px'>
-          Experience
-        </Text>
-        { content.experience.map( experience => (
-          <Block key={experience.title} title={experience.title} text={experience.text}/>
-        ))}
-
-        <Text fontSize='2xl' fontWeight='bold' mt='80px'>
-          Other habilities
-        </Text>
-        <Flex gap={['0px', '0px', '40px']} flexDir={['column', 'column', 'row']}>
-          { content.habilities.map( habilities => (
-            <Block key={habilities.title} title={habilities.title} text={habilities.text}/>
-          ))}
-        </Flex>
 
       </Flex>
 
@@ -60,7 +70,7 @@ export function Home () {
         h='150px' 
         justify='space-between'
         align='center'
-        paddingX='80px'
+        paddingX={['10px','20px','40px','60px','80px']}
         color='white'
       >
         <Flex w='30%' justify='flex-start'></Flex>
@@ -75,17 +85,14 @@ export function Home () {
             </Link>
           </Flex>
         </Flex>
-        {/* <Image src={GregLogo} alt="Arte vetorial Grégori Sabel"/> */}
         <Flex w='30%' justify='flex-end'>
           <Box w='100px'>
-            <GregLogo />
+            <GregLogo alt="Arte vetorial Grégori Sabel"/>
           </Box>
         </Flex>
       </Flex>
 
-    </Flex>   
-      
+    </Flex>         
   )
 }
 
-export default Home

@@ -4,10 +4,10 @@ import React from "react";
 interface Props {
   title: string;
   text: string;
-  hasGithub?: boolean;
+  isGithub?: boolean;
 }
 
-export function Block({ text, title, hasGithub = false }: Props) {
+export function Block({ text, title, isGithub = false }: Props) {
 
   const shapeBGColor = useColorModeValue('white', 'gray.700')
   const shapeHoverBGColor = useColorModeValue('gray.700', 'gray.400')
@@ -26,12 +26,12 @@ export function Block({ text, title, hasGithub = false }: Props) {
       transition='0.2s'
       _hover={{
         boxShadow:'2xl',
-        cursor: hasGithub ? 'pointer' : 'default',
+        cursor: isGithub ? 'pointer' : 'default',
         backgroundColor:shapeHoverBGColor,
         color:shapeHoverColor
       }}>
       
-      { hasGithub && 
+      { isGithub && 
         <Text
           position='absolute'
           top='10px'
@@ -39,7 +39,7 @@ export function Block({ text, title, hasGithub = false }: Props) {
           color={shapeBGColor}
           fontWeight='bold'
         >
-            Github
+          Github
         </Text>
       }
       <Text fontWeight='bold' fontSize='xl' pb='20px'>
