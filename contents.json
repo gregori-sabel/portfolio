@@ -30,7 +30,7 @@
         "title": "Joelho-e-o-Pe-de-Feijao, The game",
         "text": "This is a 2D platform game made in C# on Unity that was developed as a school project together with a friend. The idea was to make a simple game but with a focus in character movement and others controls",
         "link": "https://github.com/GregBerb-DEV/Joelho-e-o-Pe-de-Feijao",
-        "isGithub": false
+        "isGithub": true
       }
     ]
   },

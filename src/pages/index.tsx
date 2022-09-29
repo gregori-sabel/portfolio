@@ -17,6 +17,7 @@ export default function Home () {
       flexDir='column' 
       align='center' 
       bg={shapeBGColor} 
+
       // bgImage="url('/background.png')"        
       // bgPosition="center"
       // bgRepeat="repeat-y"        
@@ -47,14 +48,7 @@ export default function Home () {
             </Text>          
             { content.items.map( item => (
               <Box key={item.title} w='100%'>
-                { item.link &&
-                  <a href={item.link} target="_blank" rel="noreferrer">
-                    <Block  title={item.title} text={item.text} isGithub={item.isGithub}/>
-                  </a>
-                }
-                { !item.link &&
-                  <Block  title={item.title} text={item.text} />
-                }
+                <Block  title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
               </Box>
             ))}
           </>
