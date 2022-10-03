@@ -1,11 +1,8 @@
 import React from 'react'
-import { Text, Flex, Box, useColorModeValue, Link} from '@chakra-ui/react'
-import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { Text, Flex, Box, useColorModeValue} from '@chakra-ui/react'
 import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
 import contents from '../../contents.json'
-import GregLogo from '../images/gregLogo.svg'
-import background from '../images/background.png'
 import Footer from '../components/Footer';
 
 export default function Home () {
