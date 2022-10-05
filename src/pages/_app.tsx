@@ -1,20 +1,20 @@
 import type { AppProps } from 'next/app'
-import { ChakraProvider, useColorMode } from '@chakra-ui/react'
-import { theme } from '../../styles/theme'
-import { lightTheme } from '../../styles/lightTheme'
-import { darkTheme } from '../../styles/darkTheme'
+import { ChakraProvider } from '@chakra-ui/react'
+import { useContext } from 'react';
+import { DynamicThemeProvider } from '../contexts/ThemeContext'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const { colorMode } = useColorMode()
-
-  // const theme = colorMode === 'light' ? lightTheme :  darkTheme
-  // console.log('color', colorMode)
+  const themeContext = useContext(ThemeContext)
+  console.log('greg',themeContext.theme)
   
   return (
-    <ChakraProvider >
-      <title>Grégori Sabel</title>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <DynamicThemeProvider >
+      <ChakraProvider >
+        <title>Grégori Sabel</title>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </DynamicThemeProvider>
   )
 }
 
