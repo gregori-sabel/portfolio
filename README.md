@@ -1,2 +1,2 @@
 # portfolio
-Quando estiver pronto, vai ter uns textos e links legais
+Um prostifólio simples e com uns modos de cor legal 
