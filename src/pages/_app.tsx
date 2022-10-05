@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
 import { useContext } from 'react';
 import { DynamicThemeProvider } from '../contexts/ThemeContext'
 import { ThemeContext } from '../contexts/ThemeContext'
@@ -10,10 +9,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <DynamicThemeProvider >
-      <ChakraProvider >
-        <title>Grégori Sabel</title>
-        <Component {...pageProps} />
-      </ChakraProvider>
+      <title>Grégori Sabel</title>
+      <Component {...pageProps} />
     </DynamicThemeProvider>
   )
 }

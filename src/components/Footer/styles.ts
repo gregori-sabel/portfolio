@@ -8,6 +8,7 @@ export const Component = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0px 40px;
+  margin-top: 80px;
   /* padding: ['10px','20px','40px','60px','80px']}; */
   color: white;
 `

@@ -7,6 +7,6 @@ export default {
     shapeBG: '#2D3748',
     hoverBG: '#A0AEC0',
     text: 'white',
-    textHover:'black'
+    textHover: 'black'
   }
 }

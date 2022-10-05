@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Component = styled.div`
   position: relative;
   margin-top: 40px;
-  padding: 30px;
+  padding: 35px;
   box-shadow: 10px 10px 20px rgba(0,0,0, 0.1);
   border-radius: 10px;
   background-color: ${props => props.theme.colors.shapeBG};
@@ -35,10 +35,11 @@ export const GithubText = styled.p`
 
 export const Title = styled.h1`
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   padding-bottom: 20px;
 `
 
 export const Text = styled.p`
+  font-size: 18px ;
   line-height: 180%
 `

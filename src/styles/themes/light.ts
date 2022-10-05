@@ -6,7 +6,7 @@ export default {
     background: '#EDF2F7',
     shapeBG: 'white',
     hoverBG: '#2D3748',
-    text: 'black',
+    text: '#1A202C',
     textHover:'white'
   }
 }
