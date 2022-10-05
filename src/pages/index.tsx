@@ -3,7 +3,7 @@ import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
 import contents from '../../contents.json'
 import Footer from '../components/Footer';
-import { CheckThemeWrapper, Component, Section, SectionTitle } from './styles';
+import { CheckThemeWrapper, Component, Section, SectionTitle } from '../styles/homeStyle';
 
 export default function Home () {
 
