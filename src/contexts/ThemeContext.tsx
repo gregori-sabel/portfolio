@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components'
 
 import light from '../styles/themes/light'
 import dark from '../styles/themes/dark'
+import colorful from '../styles/themes/colorful'
 
 interface ThemeContextProps{
   theme: {
@@ -25,10 +26,20 @@ interface DynamicThemeProvider {
 export const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
 
 export function DynamicThemeProvider({children}: DynamicThemeProvider) {
-  const [ theme, setTheme ] = useState(light);
+  const [ theme, setTheme ] = useState(dark);
 
   const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light)
+    switch (theme.title) {
+      case 'dark':
+        setTheme(light)
+        break;
+      case 'light':
+        setTheme(colorful)
+        break;
+      case 'colorful':
+        setTheme(dark)
+        break;
+    }
   }
 
   return(

@@ -1,7 +1,7 @@
 import { Box, ChakraProvider, Fade, SlideFade } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { Component, Moon, CelestialBody, SunHole, Sun, HoleItself } from "./styles";
+import { Component, Areola, Moon, CelestialBody, SunHole, Sun, HoleItself } from "./styles";
 
 export function CheckTheme() {
   const { toggleTheme, theme } = useContext(ThemeContext)
@@ -12,10 +12,15 @@ export function CheckTheme() {
         <CelestialBody>
           <Moon />
           
-          <Fade in={theme.title === 'light'} >
+          <Fade in={theme.title !== 'dark'} >
             <Sun />
           </Fade>
         </CelestialBody>
+
+        {/* { theme.title !== 'colorful' &&
+          <Areola>
+          </Areola>
+        } */}
 
         <SunHole>
           <ChakraProvider >

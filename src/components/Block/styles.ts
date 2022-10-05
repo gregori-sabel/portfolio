@@ -11,8 +11,16 @@ export const Component = styled.div`
   color:${props => props.theme.colors.text};
   // bg:{shapeBGColor}
   
-  /* background-color: rgba(255,255,255,.1);
-  backdrop-filter: blur(10px) ; */
+  ${({ theme }) => theme.title === 'colorful' && `
+    background-color: rgba(255,255,255,.1);
+    backdrop-filter: blur(35px) ;  
+  `}  
+
+  /* ${({ theme }) => theme.title === 'colorful' && `
+    background-image: linear-gradient( to bottom right,rgba(255,255,255,.0), rgba(255,255,255,.10));
+    backdrop-filter: blur(30px) ;  
+  `} */
+
 
   transition:0.2s;
   &:hover{
@@ -35,11 +43,11 @@ export const GithubText = styled.p`
 
 export const Title = styled.h1`
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.4em;
   padding-bottom: 20px;
 `
 
 export const Text = styled.p`
-  font-size: 18px ;
+  font-size: 1.15em ;
   line-height: 180%
 `

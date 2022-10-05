@@ -10,27 +10,27 @@ export default function Home () {
   return (
       
       <Component className='Components'>      
-          <CheckThemeWrapper >
-            <CheckTheme />
-          </CheckThemeWrapper>
+        <CheckThemeWrapper >
+          <CheckTheme />
+        </CheckThemeWrapper>
 
-          <div>               
-            { contents.map(content => (
-              <Section key={content.title}>
-                <SectionTitle>
-                  {content.title}
-                </SectionTitle>          
-                { content.items.map( item => (
-                  // eslint-disable-next-line react/no-unknown-property
-                  <div key={item.title} >
-                    <Block  title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
-                  </div>
-                ))}
-              </Section>
-            ))}
-          </div>
+        <div>               
+          { contents.map(content => (
+            <Section key={content.title}>
+              <SectionTitle>
+                {content.title}
+              </SectionTitle>          
+              { content.items.map( item => (
+                // eslint-disable-next-line react/no-unknown-property
+                <div key={item.title} >
+                  <Block  title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
+                </div>
+              ))}
+            </Section>
+          ))}
+        </div>
 
-          <Footer />
+        <Footer />
       </Component>      
   )
 }

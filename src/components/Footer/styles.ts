@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Component = styled.div`
   display: flex;
-  background-color: #2D3748;
+  background-color: ${({theme}) => theme.colors.shapeBG};
   width: 100%;
   height: 150px ;
   justify-content: space-between;
@@ -11,6 +11,12 @@ export const Component = styled.div`
   margin-top: 80px;
   /* padding: ['10px','20px','40px','60px','80px']}; */
   color: white;
+
+  ${({ theme }) => theme.title === 'colorful' && `
+    background-color: rgba(255,255,255,.1);
+    backdrop-filter: blur(35px) ;  
+  `}
+
 `
 
 export const LeftSection = styled.div`

@@ -35,6 +35,13 @@ export const Sun = styled.div`
   position: absolute;
   left: 0px;
   top: 0px;
+
+  transition: .2s ease-out;
+  ${props => props.theme.title === 'colorful' 
+    ? 'border: solid 10px green; background: transparent;' 
+    : '' 
+  }
+
 `
 
 
@@ -44,9 +51,18 @@ export const SunHole = styled.div`
 `
 
 export const HoleItself = styled.div`
-  background: #1A202C;
+  /* background: #1A202C; */
+  background: ${props => props.theme.colors.background};
   height: 50px;
   width: 50px;
   border-radius: 50px;
 
+`
+
+export const Areola = styled.div`
+  /* width: 70px;
+  height: 70px;
+  background-color: black;
+
+  border-radius: 10px; */
 `
