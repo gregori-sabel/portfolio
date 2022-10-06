@@ -4,7 +4,7 @@
     "items": [
       {
         "title": "Basketball, The Natural Prediction",
-        "text": "For this project, me and my team thought ”if nature choose the natual selection to evolve things, why shouldn't we?” So we built a natural selection in python from scratch, without any librarys of IA, to help us predict the result of games using data from past games.",
+        "text": "For this project, me and my team thought ”if nature choose the natural selection to evolve things, why shouldn't we?” So we built a natural selection in python from scratch, without any librarys of IA, to help us predict the result of games using data from past games.",
         "link": "https://github.com/Pibaska/NBA-Basketball-Prediction",
         "isGithub": true
       },

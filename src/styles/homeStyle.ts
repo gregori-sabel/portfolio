@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-
+interface CheckThemeWrapperProps{
+  amountScrolled: number;
+}
 
 export const Component = styled.div`
   display: flex;
@@ -31,18 +33,31 @@ export const Component = styled.div`
       
 `
 
-export const CheckThemeWrapper = styled.div`
+export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
   /* display: flex;
   align-items: center;
   justify-content: center;
 
   padding: 10px ; */
+  
+    position: fixed ;
+    border-radius: 23px;
+    right: 40px ;
+    top: 20px ; 
+    overflow: hidden ;
+    z-index: 10;
+    /* box-shadow: 4px 4px 20px black; */
 
-  position: absolute ;
-  right:40px ;
-  top: 20px ;
-  overflow: hidden ;
-  z-index: 10;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  ${({ amountScrolled }) => amountScrolled < 50 && `
+    // top: 20px ; 
+  `}      
+  ${({ amountScrolled }) => amountScrolled > 50 && `
+    // top: 110px;  
+    transform: translateY(80vh);
+  `}  
+
 
 `
 

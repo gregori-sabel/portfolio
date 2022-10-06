@@ -5,7 +5,7 @@ import { Component, Areola, Moon, CelestialBody, SunHole, Sun, HoleItself } from
 
 export function CheckTheme() {
   const { toggleTheme, theme } = useContext(ThemeContext)
-  
+
   
   return(
       <Component onClick={toggleTheme} >
@@ -21,6 +21,7 @@ export function CheckTheme() {
           <Areola>
           </Areola>
         } */}
+
 
         <SunHole>
           <ChakraProvider >

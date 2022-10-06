@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
 import contents from '../../contents.json'
@@ -6,11 +6,21 @@ import Footer from '../components/Footer';
 import { CheckThemeWrapper, Component, Section, SectionTitle } from '../styles/homeStyle';
 
 export default function Home () {
+  const [ amountScrolled, setAmountScrolled ] = useState(-1)
+
+  function onScroll () {
+    setAmountScrolled(window.pageYOffset)
+    console.log(window.pageYOffset)
+  }
+  
+  useEffect(() => {
+    const interval = setInterval(onScroll, 500)
+  },[])
 
   return (
       
       <Component className='Components'>      
-        <CheckThemeWrapper >
+        <CheckThemeWrapper amountScrolled={amountScrolled}>
           <CheckTheme />
         </CheckThemeWrapper>
 
