@@ -10,7 +10,7 @@ export const Component = styled.div`
   padding: 0px 40px;
   margin-top: 80px;
   /* padding: ['10px','20px','40px','60px','80px']}; */
-  color: white;
+  color: ${({theme}) => theme.colors.text};
 
   ${({ theme }) => theme.title === 'colorful' && `
     background-color: rgba(255,255,255,.1);
@@ -47,6 +47,7 @@ export const RightSection = styled.div`
   display: flex;
   width:30%;
   justify-content:flex-end;
+  
 
   div{
     width:100px;

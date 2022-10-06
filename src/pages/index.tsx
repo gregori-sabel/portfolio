@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { createRef, useEffect, useRef, useState } from 'react'
 import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
 import contents from '../../contents.json'
 import Footer from '../components/Footer';
 import { CheckThemeWrapper, Component, Section, SectionTitle } from '../styles/homeStyle';
+import $ from 'jquery'
 
 export default function Home () {
   const [ amountScrolled, setAmountScrolled ] = useState(-1)
+  const [ spaceFromTheBottom, setSpaceFromTheBottom ] = useState(-1)
+
+  const checkThemeRef = useRef(null) 
 
   function onScroll () {
     setAmountScrolled(window.pageYOffset)
-    console.log(window.pageYOffset)
+
+    setSpaceFromTheBottom( -1*( ($(window).scrollTop() as number) + ($(window).height() as number) - ($(document).height() as number)) )
   }
   
   useEffect(() => {
@@ -20,7 +25,7 @@ export default function Home () {
   return (
       
       <Component className='Components'>      
-        <CheckThemeWrapper amountScrolled={amountScrolled}>
+        <CheckThemeWrapper id='check-theme' ref={checkThemeRef} amountScrolled={amountScrolled} spaceFromTheBottom={spaceFromTheBottom}>
           <CheckTheme />
         </CheckThemeWrapper>
 

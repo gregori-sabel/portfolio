@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface CheckThemeWrapperProps{
   amountScrolled: number;
+  spaceFromTheBottom: number;
 }
 
 export const Component = styled.div`
@@ -42,7 +43,7 @@ export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
   
     position: fixed ;
     border-radius: 23px;
-    right: 40px ;
+    right: 5vw ;
     top: 20px ; 
     overflow: hidden ;
     z-index: 10;
@@ -50,13 +51,50 @@ export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
 
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-  ${({ amountScrolled }) => amountScrolled < 50 && `
-    // top: 20px ; 
-  `}      
-  ${({ amountScrolled }) => amountScrolled > 50 && `
-    // top: 110px;  
-    transform: translateY(80vh);
+  /* ${({ amountScrolled }) => amountScrolled > 50 && `
+    transform: translateY(85vh);
   `}  
+
+  ${({ spaceFromTheBottom }) => spaceFromTheBottom < 100 && `
+    position: absolute ;
+    bottom: 100px;
+  `}   */
+
+
+  /* ${({ amountScrolled, spaceFromTheBottom }) => {
+    if(amountScrolled > 50 && spaceFromTheBottom > 100){
+      return `
+        transform: translateY(85vh);
+      `
+    } else if (spaceFromTheBottom <= 100){
+      return `
+        transform: translateY(0vh);
+        position: absolute ;
+        top: auto;
+        bottom: 200px;
+      `
+    } else if (spaceFromTheBottom > 100 && spaceFromTheBottom < 500){
+      return ' transition: 0s'
+    } else {
+      return ''
+    }
+  }}  */
+
+  ${({ amountScrolled, spaceFromTheBottom }) => {
+    if(amountScrolled > 50 && spaceFromTheBottom > 100){
+      return `
+        transform: translateY(85vh);
+      `
+    } else if (spaceFromTheBottom <= 100){
+      return `
+        transform: translateY(70vh) ;
+      `
+    } else if (spaceFromTheBottom > 100 && spaceFromTheBottom < 500){
+      return ' transition: 0s'
+    } else {
+      return ''
+    }
+  }} 
 
 
 `

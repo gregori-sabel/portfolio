@@ -1,13 +1,20 @@
-import React from 'react' 
+import React, { useContext } from 'react' 
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
+import { ThemeContext } from '../../contexts/ThemeContext'
 import GregLogo from '../../images/gregLogo.svg'
+import GregLogoDark from '../../images/gregLogoDark.svg'
 import { Component, LeftSection, MiddleSection, RightSection } from './styles'
 
 export default function Footer() {
+  const { theme } = useContext(ThemeContext)
+
+
   return (
     <Component >
 
-      <LeftSection ></LeftSection>
+      <LeftSection >
+        
+      </LeftSection>
 
       <MiddleSection>
         <p>Redes</p>
@@ -23,7 +30,12 @@ export default function Footer() {
 
       <RightSection>
         <div>
-          <GregLogo alt="Arte vetorial Grégori Sabel"/>
+          { theme.title !== 'light' && 
+            <GregLogo alt="Arte vetorial Grégori Sabel"/>
+          }
+          { theme.title === 'light' && 
+            <GregLogoDark alt="Arte vetorial Grégori Sabel"/>
+          }
         </div>
       </RightSection>
 
