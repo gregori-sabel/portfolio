@@ -17,7 +17,7 @@ export const Component = styled.div`
     box-shadow: 20px 20px 30px -10px rgba(0,0,0, 0.4);
     /* cursor: link !== '' ? 'pointer' : 'default'; */
     background-color:${props => props.theme.colors.hoverBG};
-    color: ${props => props.theme.colors.textHover};;
+    color: ${props => props.theme.colors.textHover};
   }
 
   ${({ theme }) => theme.title === 'colorful' && `
@@ -28,13 +28,15 @@ export const Component = styled.div`
   ${({ theme }) => theme.title === 'cartoonish' && `
     box-sizing: border-box;
     border: 3px solid black;
-    box-shadow: 10px 10px 0px rgba(0,0,0, .9);  
+    box-shadow: 10px 10px 0px rgba(0,0,0, .9); 
+    color: black; 
     &:hover{
       background-color: white;
       color: inherit;
       border: 3px solid black;
       box-shadow: 15px 15px 0px rgba(0,0,0, .9);  
       transform: translateX(-5px) translateY(-5px);
+      color: black;
     }  
   `}    
 
