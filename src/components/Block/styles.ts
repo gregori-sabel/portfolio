@@ -64,15 +64,7 @@ export const Title = styled.h1`
     background: lightblue;
     color: black;
     border-radius: 7px 7px 0px 0px;
-    :after{
-      content: '';
-      position: absolute;
-      top: 60px;
-      left: 0px;
-      width: 100%;
-      height: 2px;
-      background-color: black;
-    }
+    border-bottom: solid 3px black;
   `}   
 `
 
