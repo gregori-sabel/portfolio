@@ -6,6 +6,7 @@ interface CheckThemeWrapperProps{
 }
 
 export const Component = styled.div`
+font-family: 'Work Sans', sans-serif;
   display: flex;
   width: 100%; 
   flex-direction: column; 
@@ -129,6 +130,17 @@ export const SectionTitle = styled.h1`
     padding: 5px 15px ;
     background-color: rgba(255,255,255,.1);
     backdrop-filter: blur(35px) ;  
+    
   `}
+
+${({ theme }) => theme.title === 'cartoonish' && `
+    font-weight: 900;
+    font-size: 35px;
+    color: lightblue;
+
+    text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000, 4px 4px 0px #000;
+
+  `}    
 
 `

@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import light from '../styles/themes/light'
 import dark from '../styles/themes/dark'
 import colorful from '../styles/themes/colorful'
+import cartoonish from '../styles/themes/cartoonish'
 
 interface ThemeContextProps{
   theme: {
@@ -34,6 +35,9 @@ export function DynamicThemeProvider({children}: DynamicThemeProvider) {
         setTheme(light)
         break;
       case 'light':
+        setTheme(cartoonish)
+        break;
+      case 'cartoonish':
         setTheme(colorful)
         break;
       case 'colorful':

@@ -13,6 +13,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   scroll-behavior: smooth;
+
+
 `;
  
 export default GlobalStyle;

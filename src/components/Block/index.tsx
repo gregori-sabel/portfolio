@@ -1,5 +1,5 @@
 import { useColorModeValue } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Component, GithubText, Title, Text } from "./styles";
 
 interface Props {
@@ -12,10 +12,10 @@ interface Props {
 export function Block({ text, title, link, isGithub = false }: Props) {
 
 
+
   return(
     <a href={link !== '' ? link : undefined} target="_blank" rel="noreferrer" >
-      
-      <Component>
+      <Component >
         
         { link !== ''  && 
           <GithubText >

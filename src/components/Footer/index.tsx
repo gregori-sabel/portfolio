@@ -30,11 +30,9 @@ export default function Footer() {
 
       <RightSection>
         <div>
-          { theme.title !== 'light' && 
-            <GregLogo alt="Arte vetorial Grégori Sabel"/>
-          }
-          { theme.title === 'light' && 
-            <GregLogoDark alt="Arte vetorial Grégori Sabel"/>
+          { (theme.title === 'light' || theme.title === 'cartoonish')  
+            ? <GregLogoDark alt="Arte vetorial Grégori Sabel"/>
+            : <GregLogo alt="Arte vetorial Grégori Sabel"/>
           }
         </div>
       </RightSection>

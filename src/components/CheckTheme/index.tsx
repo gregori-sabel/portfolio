@@ -17,12 +17,6 @@ export function CheckTheme() {
           </Fade>
         </CelestialBody>
 
-        {/* { theme.title !== 'colorful' &&
-          <Areola>
-          </Areola>
-        } */}
-
-
         <SunHole>
           <ChakraProvider >
             <SlideFade 

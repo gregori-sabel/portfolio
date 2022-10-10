@@ -46,6 +46,13 @@ export const Sun = styled.div`
     : '' 
   }
 
+${props => props.theme.title === 'cartoonish' &&
+    `
+      border: dashed 2px black; 
+      background: lightblue;
+    `
+  }  
+
 `
 
 
