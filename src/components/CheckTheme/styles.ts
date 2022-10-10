@@ -39,7 +39,7 @@ export const Sun = styled.div`
   transition: .2s ease-out;
   ${props => props.theme.title === 'colorful' 
     ? `
-      border: solid 2px white; 
+      border: solid 2px lightgreen; 
       background: black;
       box-shadow: inset 0px 0px 20px green 
     `

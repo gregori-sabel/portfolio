@@ -33,7 +33,7 @@ export const Component = styled.div`
       background-color: white;
       color: inherit;
       border: 3px solid black;
-      box-shadow: 15px 15px 1px rgba(0,0,0, .9);  
+      box-shadow: 15px 15px 0px rgba(0,0,0, .9);  
       transform: translateX(-5px) translateY(-5px);
     }  
   `}    
