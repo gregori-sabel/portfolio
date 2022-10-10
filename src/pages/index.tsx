@@ -5,6 +5,7 @@ import contents from '../../contents.json'
 import Footer from '../components/Footer';
 import { CheckThemeWrapper, Component, Section, SectionTitle } from '../styles/homeStyle';
 import $ from 'jquery'
+const Fade = require('react-reveal/Fade');
 
 export default function Home () {
   const [ amountScrolled, setAmountScrolled ] = useState(-1)
@@ -32,19 +33,22 @@ export default function Home () {
         <div>               
           { contents.map(content => (
             <Section key={content.title}>
-              <SectionTitle>
-                {content.title}
-              </SectionTitle>          
+                <SectionTitle>
+              <Fade bottom>
+                  {content.title}
+              </Fade>                      
+                </SectionTitle>  
               { content.items.map( item => (
                 // eslint-disable-next-line react/no-unknown-property
-                <div key={item.title} >
-                  <Block  title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
-                </div>
+                  // <Fade bottom >
+                    <Block key={item.title}  title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
+                  // </Fade>
               ))}
             </Section>
           ))}
         </div>
-
+                    
+                    
         <Footer />
       </Component>      
   )

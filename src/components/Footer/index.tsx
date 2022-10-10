@@ -5,17 +5,20 @@ import GregLogo from '../../images/gregLogo.svg'
 import GregLogoDark from '../../images/gregLogoDark.svg'
 import { Component, LeftSection, MiddleSection, RightSection } from './styles'
 
+const Fade = require('react-reveal/Fade');
 export default function Footer() {
   const { theme } = useContext(ThemeContext)
 
 
   return (
     <Component >
+        
 
       <LeftSection >
         
       </LeftSection>
 
+    <Fade bottom >
       <MiddleSection>
         <p>Redes</p>
         <div>
@@ -27,6 +30,7 @@ export default function Footer() {
           </a>
         </div>
       </MiddleSection>
+    </Fade>
 
       <RightSection>
         <div>
