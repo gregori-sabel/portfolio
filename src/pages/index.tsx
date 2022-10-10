@@ -41,7 +41,7 @@ export default function Home () {
               { content.items.map( (item, i) => (
                 // eslint-disable-next-line react/no-unknown-property
                   // <Fade bottom >
-                    <Block key={item.title} index={i} title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
+                  <Block key={item.title} index={i} title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
                   // </Fade>
               ))}
             </Section>

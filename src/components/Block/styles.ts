@@ -39,7 +39,10 @@ export const Component = styled.div`
       color: black;
     }  
   `}    
+`
 
+export const LinkWrapper = styled.a`
+  width: 100%;
 `
 
 
