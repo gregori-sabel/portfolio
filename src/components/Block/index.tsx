@@ -7,16 +7,17 @@ interface Props {
   text: string;
   link?: string;
   isGithub?: boolean;
+  index: number;
 }
 
-export function Block({ text, title, link, isGithub = false }: Props) {
+export function Block({ text, title, link, isGithub = false, index }: Props) {
 
 
 
   return(
     <a href={link !== '' ? link : undefined} target="_blank" rel="noreferrer" >
         <Component >
-        <Fade bottom >
+        <Fade bottom cascade delay={index * 200}>
           <div>
 
           { link !== ''  && 

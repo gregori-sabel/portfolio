@@ -38,16 +38,15 @@ export default function Home () {
                   {content.title}
               </Fade>                      
                 </SectionTitle>  
-              { content.items.map( item => (
+              { content.items.map( (item, i) => (
                 // eslint-disable-next-line react/no-unknown-property
                   // <Fade bottom >
-                    <Block key={item.title}  title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
+                    <Block key={item.title} index={i} title={item.title} text={item.text} link={item.link} isGithub={item.isGithub}/>
                   // </Fade>
               ))}
             </Section>
           ))}
         </div>
-                    
                     
         <Footer />
       </Component>      
