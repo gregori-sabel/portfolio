@@ -31,6 +31,12 @@
         "text": "This is a 2D platform game made in C# on Unity that was developed as a school project together with a friend. The idea was to make a simple game but with a focus in character movement and others controls",
         "link": "https://github.com/GregBerb-DEV/Joelho-e-o-Pe-de-Feijao",
         "isGithub": true
+      },
+      {
+        "title": "GregFolio. Yes, this Website",
+        "text": "it's a simple site, but it was fun to make. Made in ReactJs using styled-components.",
+        "link": "https://github.com/gregori-sabel/portfolio",
+        "isGithub": true
       }
     ]
   },
@@ -39,13 +45,13 @@
     "items": [
       {
         "title": "Lince, The growing local company",
-        "text": "Lince was responsible for make the tecnology for the two biggest factories of my city, and I used a mix of Java, Javascript, and CSS inside another language called xseed that is like a cobol to java migration language. I stayed 6 months there, and left to focus in React.",
+        "text": "Lince was responsible for make the tecnology for the two biggest factories of my city. There I used a mix of Java, Javascript, and CSS inside another language called xseed that is like a cobol to java migration language. I stayed 6 months there, and left to focus in React.",
         "link": "",
         "isGithub": false        
       },
       {
         "title": "SCI - Sistemas contábeis",
-        "text": "SCI is a company that makes accounting systems for people and for others companies, I worked making maintence in the system with them for 1 year. I used Delphi, but was not my favorite stack. But it was a great experience.",
+        "text": "SCI is a company that makes accounting systems for people and for others companies. I worked making maintence in the system with them for 1 year. I used Delphi, was not my favorite stack but it was a great experience.",
         "link": "",
         "isGithub": false    
       }
@@ -56,7 +62,7 @@
       "items": [
       {
         "title": "Edition",
-        "text": "Editing, both video and images, is one of my hobbies for the last 8 years, and I learned a lot in this time. in the matter of technology, I have experience with Sony Vegas and Davince Resolve for videos, and Photoshop and Illustrator for images.",
+        "text": "Editing, both video and images, were one of my hobbies for the last 8 years, and I learned a lot in this time. in the matter of technology, I have experience with Sony Vegas and Davince Resolve for videos, and Photoshop and Illustrator for images.",
         "link": "",
         "isGithub": false    
       },

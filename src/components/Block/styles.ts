@@ -28,15 +28,18 @@ export const Component = styled.div`
   ${({ theme }) => theme.title === 'cartoonish' && `
     box-sizing: border-box;
     border: 3px solid black;
-    box-shadow: 10px 10px 0px rgba(0,0,0, .9); 
+    box-shadow: 10px 10px 0px rgba(0,0,0, .7); 
     color: black; 
     &:hover{
       background-color: white;
       color: inherit;
       border: 3px solid black;
-      box-shadow: 15px 15px 0px rgba(0,0,0, .9);  
+      box-shadow: 15px 15px 0px rgba(0,0,0, .7);  
       transform: translateX(-5px) translateY(-5px);
       color: black;
+      p:first-child {
+        color: black;
+      }
     }  
   `}    
 `
@@ -52,6 +55,12 @@ export const GithubText = styled.p`
   right: 20px;
   color: ${props => props.theme.colors.shapeBG};
   font-weight: bold;
+  z-index: 10;
+  transition: 0.2s;
+
+  ${({ theme }) => theme.title === 'cartoonish' && `
+    color: lightblue;
+  `}     
 
 `
 
