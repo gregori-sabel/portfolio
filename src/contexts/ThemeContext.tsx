@@ -5,6 +5,7 @@ import light from '../styles/themes/light'
 import dark from '../styles/themes/dark'
 import colorful from '../styles/themes/colorful'
 import cartoonish from '../styles/themes/cartoonish'
+import twitter from '../styles/themes/twitter'
 
 interface ThemeContextProps{
   theme: {
@@ -27,22 +28,25 @@ interface DynamicThemeProvider {
 export const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
 
 export function DynamicThemeProvider({children}: DynamicThemeProvider) {
-  const [ theme, setTheme ] = useState(dark);
+  const [ theme, setTheme ] = useState(cartoonish);
 
   const toggleTheme = () => {
     switch (theme.title) {
-      case 'dark':
+      case 'cartoonish':
         setTheme(light)
         break;
       case 'light':
-        setTheme(cartoonish)
+        setTheme(dark)
         break;
-      case 'cartoonish':
+      case 'dark':
         setTheme(colorful)
         break;
       case 'colorful':
-        setTheme(dark)
+        setTheme(twitter)
         break;
+      case 'twitter':
+        setTheme(cartoonish)
+        break;        
     }
   }
 

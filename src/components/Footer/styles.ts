@@ -41,7 +41,7 @@ export const MiddleSection = styled.div`
   gap:10px;
 
   p{
-    font-weight: light;
+    font-weight: 600;
   }
 
   div{

@@ -46,10 +46,17 @@ export const Sun = styled.div`
     : '' 
   }
 
-${props => props.theme.title === 'cartoonish' &&
+  ${props => props.theme.title === 'cartoonish' &&
     `
       border: dashed 2px black; 
       background: lightblue;
+    `
+  }  
+
+  ${props => props.theme.title === 'twitter' &&
+    `
+      border: dashed 1px black; 
+      background: rgb(29, 155, 240);
     `
   }  
 

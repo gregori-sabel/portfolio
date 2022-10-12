@@ -44,10 +44,6 @@ export const Component = styled.div`
   `}    
 `
 
-export const LinkWrapper = styled.a`
-  width: 100%;
-`
-
 
 export const GithubText = styled.p`
   position: absolute;
@@ -72,6 +68,8 @@ export const Title = styled.h1`
   position: relative;
   width: 100%;
 
+
+
   ${({ theme }) => theme.title === 'cartoonish' && `
     padding-top: 15px;
     margin-bottom: 15px;
@@ -85,5 +83,6 @@ export const Title = styled.h1`
 export const Text = styled.p`
   padding: 0px 35px 35px 35px;
   font-size: 1.15em ;
-  line-height: 180%
+  line-height: 180%;
+
 `

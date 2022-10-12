@@ -1,0 +1,12 @@
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+  title: 'twitter',
+
+  colors: {
+    background: '#1A202C',
+    shapeBG: '#2D3748',
+    hoverBG: '#A0AEC0',
+    text: 'white',
+    textHover: 'black'
+  }
+}

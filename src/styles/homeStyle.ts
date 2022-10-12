@@ -141,7 +141,11 @@ ${({ theme }) => theme.title === 'cartoonish' && `
     text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
     1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000, 4px 4px 0px #000;
 
+    ::first-letter{
+      font-size: 4rem
+    }
   `} 
 
 
+  
 `

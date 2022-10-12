@@ -1,5 +1,5 @@
 import React from "react";
-import { Component, GithubText, Title, Text, LinkWrapper } from "./styles";
+import { Component, GithubText, Title, Text } from "./styles";
 const Fade = require('react-reveal/Fade');
 
 interface Props {
@@ -15,8 +15,8 @@ export function Block({ text, title, link, isGithub = false, index }: Props) {
 
 
   return(
-    <LinkWrapper href={link !== '' ? link : undefined} target="_blank" rel="noreferrer" >
-      <Component >
+    <Component >
+      <a href={link !== '' ? link : undefined} target="_blank" rel="noreferrer" >
         <Fade bottom cascade delay={index * 200}>
           <div>
 
@@ -33,8 +33,8 @@ export function Block({ text, title, link, isGithub = false, index }: Props) {
           </Text>
           </div>
         </Fade>          
-      </Component>
+      </a>  
+    </Component>
 
-    </LinkWrapper>  
   )
 }
