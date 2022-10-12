@@ -27,9 +27,10 @@ export function Post({ text, title, link, isGithub = false, index }: Props) {
       <Content>
         
         <Header>
-          <h2>{title}</h2><p>@{title.split(' ')[0]}</p><div /><p>16h</p>
+          <h2>Greg</h2><p>@GregLocao</p><div /><p>16h</p>
         </Header>
 
+        <Text><strong>{title}</strong></Text>
         <Text>{text}</Text>
         { link !== '' &&
           <Text>
