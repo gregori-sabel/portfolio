@@ -7,7 +7,7 @@ export const Component = styled.div`
 
 
   border-top: solid 1px rgba(255,255,255,.2);
-  border-bottom: solid 1px rgba(255,255,255,.2);
+  /* border-bottom: solid 1px rgba(255,255,255,.2); */
 
   padding: 15px 16px;
 

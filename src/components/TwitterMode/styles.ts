@@ -1,10 +1,18 @@
 import styled from "styled-components";
 
-export const Component = styled.div`
+export const BackgroundWrapper = styled.div`
   display: flex ;
   flex-direction: row;
   justify-content: center;
 
+  background-color: black;
+`;
+
+export const Component = styled.div`
+  display: flex ;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 700px;
 
   background-color: black;
 `
@@ -107,5 +115,21 @@ export const Button = styled.div`
 `;
 
 export const Posts = styled.div`
-  width: 600px;
+  width: 100%;
+  padding-bottom: 50px;
+`;
+
+
+export const Footer = styled.div`
+  position: fixed;
+  bottom: 0px;
+  background-color: black;
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: gray;
+  border-top: solid 1px rgba(255,255,255,0.3);
 `;
