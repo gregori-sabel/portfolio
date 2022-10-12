@@ -111,7 +111,7 @@ export const Button = styled.div`
   background-color: rgb(29, 155, 240);
   font-weight: bold;
 
-  margin-right: 40px;
+  margin-right: 4%;
 `;
 
 export const Posts = styled.div`
