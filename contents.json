@@ -4,19 +4,19 @@
     "items": [
       {
         "title": "Basketball, The Natural Prediction",
-        "text": "For this project, me and my team thought ”if nature choose the natural selection to evolve things, why shouldn't we?” So we built a natural selection in python from scratch, without any librarys of IA, to help us predict the result of games using data from past games.",
+        "text": "For this project, me and my team thought ”if even nature uses natural selection to evolve things, why shouldn't we?” So we built a natural selection system in python from scratch, without any AI libraries, to help us predict the result of games using data from past games.",
         "link": "https://github.com/Pibaska/NBA-Basketball-Prediction",
         "isGithub": true
       },
       {
         "title": "WikiSpeed, The daily game of links",
-        "text": "In this game you start in a wikipedia page and you have to get in another specified page just through the links. You can play this game by clicking here",
+        "text": "In this game you start in a Wikipedia page and you have to get to another specified page just using the links. You can play this game by clicking here",
         "link": "http://wikispeed.vercel.app/",
         "isGithub": false
       },
       {
         "title": "Netflix, the return of the clone",
-        "text": "For this project, I wanted to pratice my CSS, so I choose a site that most of people know the style and tried to copy it design.",
+        "text": "For this project, I wanted to pratice my CSS, so I choose a site with a style known by most people and tried to copy its design.",
         "link": "https://github.com/Greg-art/Netflix-Clone",
         "isGithub": true
       },
@@ -28,7 +28,7 @@
       },
       {
         "title": "Joelho-e-o-Pe-de-Feijao, The game",
-        "text": "This is a 2D platform game made in C# on Unity that was developed as a school project together with a friend. The idea was to make a simple game but with a focus in character movement and others controls",
+        "text": "This is a 2D platform game made with C# on Unity. It was developed with a friend as a school project. The idea was to make a simple game but with a focus in character movement and other controls feeling good to play",
         "link": "https://github.com/GregBerb-DEV/Joelho-e-o-Pe-de-Feijao",
         "isGithub": true
       },
@@ -45,13 +45,13 @@
     "items": [
       {
         "title": "Lince, The growing local company",
-        "text": "Lince was responsible for make the tecnology for the two biggest factories of my city. There I used a mix of Java, Javascript, and CSS inside another language called xseed that is like a cobol to java migration language. I stayed 6 months there, and left to focus in React.",
+        "text": "Lince was responsible for making the tecnology for the two biggest factories of my city. There I used a mix of Java, Javascript, and CSS inside another language called Xseed, a COBOL to Java migration language. I stayed 6 months there, and left to focus in React.",
         "link": "",
         "isGithub": false        
       },
       {
         "title": "SCI - Sistemas contábeis",
-        "text": "SCI is a company that makes accounting systems for people and for others companies. I worked making maintence in the system with them for 1 year. I used Delphi, was not my favorite stack but it was a great experience.",
+        "text": "SCI is a company that makes accounting systems for people and for other companies. I worked maintaining their system during 1 year. There I worked Delphi, which was not my favorite stack but it was a great experience.",
         "link": "",
         "isGithub": false    
       }
@@ -62,13 +62,13 @@
       "items": [
       {
         "title": "Edition",
-        "text": "Editing, both video and images, were one of my hobbies for the last 8 years, and I learned a lot in this time. in the matter of technology, I have experience with Sony Vegas and Davince Resolve for videos, and Photoshop and Illustrator for images.",
+        "text": "Editing, both video and images, has been one of my hobbies for the last 8 years, and I learned a lot in this time. In the matter of technology, I have experience with Sony Vegas and DaVinci Resolve for videos, and Photoshop and Illustrator for images.",
         "link": "",
         "isGithub": false    
       },
       {
-        "title": "Maybe its just that",
-        "text": "I thought that I would have more to say. Sorry for creating a new session just for that.",
+        "title": "Maybe it's just that",
+        "text": "I thought that I would have more to say. Sorry for creating a new session just for it.",
         "link": "",
         "isGithub": false    
       }
