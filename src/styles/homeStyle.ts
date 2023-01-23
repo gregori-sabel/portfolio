@@ -138,6 +138,8 @@ export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
     animation-delay: 5s;
 
     font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    color: red;
     content: 'Try new themes ->';
     white-space: nowrap;
     position: absolute;
