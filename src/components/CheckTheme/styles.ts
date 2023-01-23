@@ -8,7 +8,7 @@ export const Component = styled.div`
   border-radius: 360px;
   position: relative;
   cursor: pointer;
-
+  
 `
 
 export const CelestialBody = styled.div`

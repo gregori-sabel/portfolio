@@ -35,6 +35,12 @@ font-family: 'Work Sans', sans-serif;
       
 `
 
+export const Suggestion = styled.div`
+
+  overflow: hidden ;
+  border-radius: 23px;
+`
+
 export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
   /* display: flex;
   align-items: center;
@@ -46,7 +52,7 @@ export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
     border-radius: 23px;
     right: 5vw ;
     top: 20px ; 
-    overflow: hidden ;
+    /* overflow: hidden ; */
     z-index: 10;
     /* box-shadow: 4px 4px 20px black; */
 
@@ -81,7 +87,7 @@ export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
     }
   }}  */
 
-  ${({ amountScrolled, spaceFromTheBottom }) => {
+  /* ${({ amountScrolled, spaceFromTheBottom }) => {
     if(amountScrolled > 50 && spaceFromTheBottom > 100){
       return `
         transform: translateY(85vh);
@@ -95,10 +101,54 @@ export const CheckThemeWrapper = styled.div<CheckThemeWrapperProps>`
     } else {
       return ''
     }
-  }} 
+  }}  */
+
+@keyframes moveAcross {
+    0% {
+      opacity: 0%;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes boing {
+    0% {
+      left: -160px;
+    }
+    50% {
+      left: -170px;
+    }
+    100% {
+      left: -160px;
+    }
+  }
+
+  ::after{
+    opacity: 0%;
+    animation: 
+      moveAcross 25s ease-in-out,
+      boing 1s ease-in-out infinite ;
+    animation-fill-mode: forwards;  
+    animation-delay: 5s;
+
+    font-family: 'Work Sans', sans-serif;
+    content: 'Try new themes ->';
+    white-space: nowrap;
+    position: absolute;
+    top: 14px;
+    left: -160px;
+  }
+
 
 
 `
+
 
 export const Section = styled.div`
   display: flex;

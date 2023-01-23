@@ -3,7 +3,7 @@ import { Block } from '../components/Block';
 import { CheckTheme } from '../components/CheckTheme';
 import contents from '../../contents.json'
 import Footer from '../components/Footer';
-import { CheckThemeWrapper, Component, Section, SectionTitle } from '../styles/homeStyle';
+import { CheckThemeWrapper, Suggestion, Component, Section, SectionTitle } from '../styles/homeStyle';
 import $ from 'jquery'
 import { ThemeContext } from '../contexts/ThemeContext';
 import TwitterMode from '../components/TwitterMode';
@@ -28,9 +28,11 @@ export default function Home () {
 
   return (
     <>
-      <CheckThemeWrapper id='check-theme' ref={checkThemeRef} amountScrolled={amountScrolled} spaceFromTheBottom={spaceFromTheBottom}>
-        <CheckTheme />
-      </CheckThemeWrapper>
+        <CheckThemeWrapper id='check-theme' ref={checkThemeRef} amountScrolled={amountScrolled} spaceFromTheBottom={spaceFromTheBottom}>
+          <Suggestion>
+            <CheckTheme />
+          </Suggestion>
+        </CheckThemeWrapper>
     
       { theme.title === 'twitter' &&
         <TwitterMode />
